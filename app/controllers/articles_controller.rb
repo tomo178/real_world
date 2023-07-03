@@ -2,6 +2,11 @@ class ArticlesController < ApplicationController
   # セットアップ: レコードを取得する前に実行
   before_action :set_article, only: [:show, :update, :destroy]
 
+
+  def index
+    @articles = Article.all
+  end
+  
   # POST /<model_name_plural>
   # レコードの作成
   def create
@@ -52,4 +57,3 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :description, :body)
     end
 end
-　

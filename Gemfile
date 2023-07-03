@@ -10,7 +10,10 @@ gem "rails", "~> 7.0.5"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
+
+# Use mysql2 as the database for Active Record
+gem 'mysql2'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -68,8 +71,12 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
-  gem "selenium-webdriver"
+  gem "selenium-webdriver", ">= 4.0"
   gem "webdrivers"
+end
+
+group :production do
+  gem 'unicorn', '5.8.0'
 end
 
 gem 'active_model_serializers'
