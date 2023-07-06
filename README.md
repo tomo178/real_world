@@ -1,27 +1,22 @@
-# README
+# RealWorld のデプロイ
+RealWorld のバックエンドの API を AWS 上にデプロイしましょう。提出は RealWorld の GitHub リポジトリの URL を記載してください。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ステップ1
+RealWorld のバックエンドの API を AWS 上にデプロイしてください。デプロイする際には、次の要件を満たすようにしてください。
 
-Things you may want to cover:
+各エンドポイントに対してリクエストを送ると、正しいレスポンスが返ってくること
+API サーバー (EC2 もしくは ECS) とデータベースサーバー (RDS) は別々に構築すること
+データベースサーバーは、API サーバーからのみアクセスできるようにすること
+独自ドメインでアクセスできるようにすること
+SSL 化 (HTTPS 化) すること
+デプロイできたら、RealWorld の GitHub リポジトリの README にデプロイした URL を記載してください。
 
-* Ruby version
+なお、独自ドメインは追加取得すると費用がかかるため、今まで学習用に取得した独自ドメインがある場合は、それを使いまわすと費用が少なくすみます。
 
-* System dependencies
+## https://instaautopost.com/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ステップ2
+構築したシステムを、インフラ構成図 (AWS のアーキテクチャ図) として draw.io などを用いて描いてください。描いたインフラ構成図は GitHub のリポジトリ の README もしくは documents ディレクトリにアップしてください。
 
 ## インフラ構成図
 ![rapture_20230704202236](https://github.com/tomo178/original_product/assets/93224469/518550dc-e331-4a24-9d47-82ee9b04fefa)
